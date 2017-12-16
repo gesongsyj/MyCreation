@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/junyi/utils/generator/templates/CoreConfig.ftl=UTF-8
+encoding//src/main/java/com/junyi/utils/generator/templates/CoreRoutes.ftl=UTF-8
+encoding//src/main/java/com/junyi/utils/generator/templates/GenericService.ftl=UTF-8
+encoding//src/main/java/com/junyi/utils/generator/templates/ObjController.ftl=UTF-8
+encoding//src/main/java/com/junyi/utils/generator/templates/ObjQueryObject.ftl=UTF-8
+encoding//src/main/java/com/junyi/utils/generator/templates/ObjService.ftl=UTF-8
+encoding//src/main/java/com/junyi/utils/generator/templates/QueryObject.ftl=UTF-8

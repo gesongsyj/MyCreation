@@ -1,0 +1,76 @@
+Table: authrecord
+----------------+--------------+------+-----+---------+---------
+ Field          | Type         | Null | Key | Default | Remarks 
+----------------+--------------+------+-----+---------+---------
+ id             | BIGINT(19)   | NO   | PRI |         |         
+ type           | TINYINT(3)   | YES  |     |         |         
+ state          | TINYINT(3)   | YES  |     |         |         
+ result         | FLOAT(10,2)  | YES  |     |         |         
+ authTime       | DATETIME(19) | YES  |     |         |         
+ author_id      | BIGINT(19)   | YES  |     |         |         
+ authorHotel_id | BIGINT(19)   | YES  |     |         |         
+----------------+--------------+------+-----+---------+---------
+
+Table: customer
+--------+-------------+------+-----+---------+---------
+ Field  | Type        | Null | Key | Default | Remarks 
+--------+-------------+------+-----+---------+---------
+ id     | BIGINT(19)  | NO   | PRI |         |         
+ idNum  | VARCHAR(40) | YES  |     |         |         
+ name   | VARCHAR(20) | YES  |     |         |         
+ image1 | VARCHAR(40) | YES  |     |         |         
+ image2 | VARCHAR(40) | YES  |     |         |         
+--------+-------------+------+-----+---------+---------
+
+Table: hotel
+---------------------+--------------+------+-----+---------+---------
+ Field               | Type         | Null | Key | Default | Remarks 
+---------------------+--------------+------+-----+---------+---------
+ id                  | BIGINT(19)   | NO   | PRI |         |         
+ hotelName           | VARCHAR(50)  | YES  |     |         |         
+ address             | VARCHAR(200) | YES  |     |         |         
+ clientSn            | VARCHAR(50)  | YES  |     |         |         
+ regionOfProvince_id | BIGINT(19)   | YES  |     |         |         
+ regionOfCity_id     | BIGINT(19)   | YES  |     |         |         
+ regionOfArea_id     | BIGINT(19)   | YES  |     |         |         
+---------------------+--------------+------+-----+---------+---------
+
+Table: logininfo
+----------+-------------+------+-----+---------+---------
+ Field    | Type        | Null | Key | Default | Remarks 
+----------+-------------+------+-----+---------+---------
+ id       | BIGINT(19)  | NO   | PRI |         |         
+ username | VARCHAR(50) | NO   |     |         |         
+ password | VARCHAR(50) | NO   |     |         |         
+ userType | TINYINT(3)  | NO   |     |         |         
+----------+-------------+------+-----+---------+---------
+
+Table: manager
+---------------------+-------------+------+-----+---------+---------
+ Field               | Type        | Null | Key | Default | Remarks 
+---------------------+-------------+------+-----+---------+---------
+ id                  | BIGINT(19)  | NO   | PRI |         |         
+ realName            | VARCHAR(50) | YES  |     |         |         
+ sn                  | VARCHAR(50) | YES  |     |         |         
+ regionOfProvince_id | BIGINT(19)  | YES  |     |         |         
+ regionOfCity_id     | BIGINT(19)  | YES  |     |         |         
+ regionOfArea_id     | BIGINT(19)  | YES  |     |         |         
+---------------------+-------------+------+-----+---------+---------
+
+Table: systemdic
+-------+-------------+------+-----+---------+---------
+ Field | Type        | Null | Key | Default | Remarks 
+-------+-------------+------+-----+---------+---------
+ id    | BIGINT(19)  | NO   | PRI |         |         
+ title | VARCHAR(20) | YES  |     |         |         
+-------+-------------+------+-----+---------+---------
+
+Table: systemdicitem
+-----------+-------------+------+-----+---------+---------
+ Field     | Type        | Null | Key | Default | Remarks 
+-----------+-------------+------+-----+---------+---------
+ id        | BIGINT(19)  | NO   | PRI |         |         
+ title     | VARCHAR(40) | YES  |     |         |         
+ parent_id | BIGINT(19)  | YES  |     |         |         
+-----------+-------------+------+-----+---------+---------
+
