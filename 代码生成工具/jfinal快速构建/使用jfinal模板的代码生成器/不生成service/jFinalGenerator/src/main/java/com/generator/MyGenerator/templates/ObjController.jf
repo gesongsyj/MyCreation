@@ -1,0 +1,24 @@
+package #(controllerPackageName);
+
+import com.jfinal.core.Controller;
+import com.jfinal.plugin.activerecord.Page;
+import #(modelPackageName).#(tableMeta.modelName);
+import #(objQueryObjectPackageName).#(tableMeta.modelName)QueryObject;
+
+public class #(tableMeta.modelName)Controller extends Controller{
+	
+	public void testSave(){
+		for (int i = 0; i <20; i++) {
+			new #(tableMeta.modelName)().set("id",i+100).save();
+		}
+		renderText("添加");
+	}
+	public void testPage(){
+		#(tableMeta.modelName)QueryObject qo=new #(tableMeta.modelName)QueryObject();
+		//qo.setKeyword("11");
+		//qo.setParentId(110L);
+		Page<#(tableMeta.modelName)> paginate = #(tableMeta.modelName).dao.paginate(qo);
+		System.out.println(paginate.getList());
+		renderText("查询");
+	}
+}

@@ -1,0 +1,13 @@
+package #(servicePackageName);
+
+import com.jfinal.plugin.activerecord.Page;
+import #(modelPackageName).#(tableMeta.modelName);
+import #(objQueryObjectPackageName).#(tableMeta.modelName)QueryObject;
+
+public class #(tableMeta.modelName)Service{
+
+	public Page<#(tableMeta.modelName)> paginate(#(tableMeta.modelName)QueryObject qo) {
+		return #(tableMeta.modelName).dao.paginate(qo);
+	}
+
+}

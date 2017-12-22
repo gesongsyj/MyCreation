@@ -1,0 +1,11 @@
+package #(objQueryObjectPackageName);
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class #(tableMeta.modelName)QueryObject extends QueryObject {
+	private String keyword;// 关键字
+
+}

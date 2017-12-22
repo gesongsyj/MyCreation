@@ -1,0 +1,16 @@
+package #(coreRoutesPackageName);
+
+import com.jfinal.config.Routes;
+#for(tableMeta:tableMetas)
+import #(controllerPackageName).#(tableMeta.modelName)Controller;
+#end
+public class #(coreRoutesClassName) extends Routes{
+
+	@Override
+	public void config() {
+		#for(tableMeta:tableMetas)
+		add("/#(tableMeta.modelName.toLowerCase())", #(tableMeta.modelName)Controller.class);
+		#end
+	}
+
+}
