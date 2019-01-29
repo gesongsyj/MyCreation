@@ -1,0 +1,5 @@
+#for (tableMeta : tableMetas)
+#[[#namespace]]#("#(tableMeta.modelName)")
+	#[[#include]]#("#(tableMeta.name).sql")
+#[[#end]]#
+#end

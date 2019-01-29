@@ -1,0 +1,26 @@
+package #(myGenerator.controllerPackageName);
+
+import com.jfinal.core.Controller;
+import com.jfinal.plugin.activerecord.Page;
+import #(myGenerator.modelPackageName).#(tableMeta.modelName);
+import #(myGenerator.queryPackageName).#(tableMeta.modelName)QueryObject;
+import #(myGenerator.servicePackageName).#(tableMeta.modelName)Service;
+
+public class #(tableMeta.modelName)Controller extends Controller{
+	#(tableMeta.modelName)Service #(tableMeta.name)Service=new #(tableMeta.modelName)Service();
+	
+	public void testSave(){
+		for (int i = 0; i <20; i++) {
+			new #(tableMeta.modelName)().set("id",i+100).save();
+		}
+		renderText("添加");
+	}
+	public void testPage(){
+		#(tableMeta.modelName)QueryObject qo=new #(tableMeta.modelName)QueryObject();
+		//qo.setKeyword("11");
+		//qo.setParentId(110L);
+		Page<#(tableMeta.modelName)> paginate = #(tableMeta.modelName).dao.paginate(qo);
+		System.out.println(paginate.getList());
+		renderText("查询");
+	}
+}

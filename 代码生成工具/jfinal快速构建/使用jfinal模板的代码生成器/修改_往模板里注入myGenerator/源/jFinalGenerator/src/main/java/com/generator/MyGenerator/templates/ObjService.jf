@@ -1,0 +1,13 @@
+package #(myGenerator.servicePackageName);
+
+import com.jfinal.plugin.activerecord.Page;
+import #(myGenerator.modelPackageName).#(tableMeta.modelName);
+import #(myGenerator.queryPackageName).#(tableMeta.modelName)#(myGenerator.queryObjectName);
+
+public class #(tableMeta.modelName)Service{
+
+	public Page<#(tableMeta.modelName)> paginate(#(tableMeta.modelName)QueryObject qo) {
+		return #(tableMeta.modelName).dao.paginate(qo);
+	}
+
+}
